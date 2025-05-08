@@ -98,6 +98,8 @@ mvn clean package
 java -jar target/employee-0.0.1-SNAPSHOT.jar
 La aplicación quedará disponible en: http://localhost:8080
 
+Ruta para utilizar Swagger: http://localhost:8080/swagger-ui/index.html
+
 ## 📄 Licencia
 
 Este proyecto es de uso libre con fines académicos y profesionales. Sugerencia: adapta a tus necesidades y da crédito si usas partes significativas.
