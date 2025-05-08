@@ -1,0 +1,50 @@
+# Compilados de Java
+*.class
+
+# Archivos generados por Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Archivos de configuración de logs
+*.log
+
+# IDEs
+/.idea/
+/*.iml
+*.iws
+*.ipr
+*.sw?
+
+# Eclipse
+*.classpath
+*.project
+*.settings/
+
+# VS Code
+.vscode/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configuración del sistema operativo
+*.bak
+*.tmp
+
+# Archivos de entorno
+.env
+
+# Configuración de pruebas
+test-output/
+.surefire-*
+
+# Bases de datos embebidas o de pruebas
+*.h2.db
+*.mv.db
+*.db
+
+# Carpetas creadas por herramientas externas
+out/
+
+# Ignorar configuración local sensible
+src/main/resources/application-local.yml

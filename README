@@ -1,0 +1,103 @@
+# 🧑‍💼 Employee Management API
+
+Una API REST construida con **Spring Boot**, **Java 17** y **MongoDB**, diseñada para administrar empleados. 
+
+## 🚀 Características
+
+- Obtener todos los empleados
+- Crear uno o varios empleados
+- Actualizar empleados
+- Eliminar empleados
+- Bitácora de eventos de todas las operaciones (event_log)
+- Manejo de excepciones personalizadas
+- Integración con MongoDB local o Atlas
+- Manejo de logs 
+- Muestra todos los headers en el log
+
+## 📁 Estructura del proyecto
+
+technical_test/
+├── src/
+│ └── main/
+│ ├── java/com/example/employee/
+│ │ ├── controller/ # Controlador REST
+│ │ ├── exception/ # Excepciones personalizadas
+│ │ ├── model/ # Modelo de datos
+│ │ ├── repository/ # Repositorio MongoDB
+│ │ ├── logging/ # Clase para el filtro de los headers en el log
+│ │ ├── service/ # Interfaz del servicio
+│ │ └── service/impl/ # Implementación del servicio
+│ └── resources/
+│ └── application.yaml # Configuración Spring Boot
+│ └── logback-spring.xml # Configuración de Log
+| └──test/java/com/example/employee/controller # Controlador de los test 
+├── pom.xml
+└── README.md
+
+## 🧪 Endpoints disponibles
+
+### Employee
+Método Endpoint Descripción
+GET /api/employee/{id} Obtener un empleado
+GET /api/employees Obtener todos los empleados
+POST /api/employees Guardar múltiples empleados
+POST /api/employee Guardar un empleado
+PUT /api/employees/{id} Actualizar un empleado
+DELETE /api/employees/{id} Eliminar un empleado
+
+### Event_log
+Método Endpoint Descripción
+GET /api/event-log Todos los eventos
+GET /api/event-log/entity/{entity} Eventos por tipo de entity
+GET /api/event-log/action/{action} Eventos por tipo de action
+GET /api/event-log/entity/{entity}/action/{action} Eventos por tipo de entity y por tipo de action
+
+## 🧪 Pruebas unitarias
+
+Las pruebas están ubicadas en:
+src/test/java/com/example/employee/
+
+Ejecutar con:
+mvn test
+
+## 🧪 Postman
+En la carpeta addons se agrega el archivo 
+**Employee Management API.postman_collection.json** 
+El cuál nos permite importar las colecciones para realizar las pruebas directamente en Postman.
+
+## ▶️ Ejecución
+
+### 1. Requisitos previos
+
+Java 17 instalado
+MongoDB local corriendo (si no usas Atlas)
+Maven instalado
+
+### 2. Clonar el proyecto
+
+git clone https://github.com/tu-usuario/employee-api.git
+cd employee-api
+
+### 3. Configuración local del entorno
+Renombra el archivo que se encuentra en la carpeta:
+src/main/resources/application-local.yml.example
+Al nombre application-local.yml
+
+Reemplaza los siguientes valores:
+<user> → Tu usuario de MongoDB Atlas u otro proveedor.
+<password> → La contraseña del usuario.
+<host> → El host de tu clúster (por ejemplo: cluster0.mongodb.net).
+<database> → El nombre de tu base de datos.
+
+### 4. Construir el proyecto
+
+mvn clean package
+
+### 5. Ejecutar la aplicación
+
+java -jar target/employee-0.0.1-SNAPSHOT.jar
+La aplicación quedará disponible en: http://localhost:8080
+
+## 📄 Licencia
+
+Este proyecto es de uso libre con fines académicos y profesionales. Sugerencia: adapta a tus necesidades y da crédito si usas partes significativas.
