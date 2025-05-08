@@ -48,3 +48,4 @@ out/
 
 # Ignorar configuración local sensible
 src/main/resources/application-local.yml
+src/main/resources/application.yml

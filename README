@@ -80,14 +80,11 @@ Nos movemos al directorio que acabamos de crear
 
 ### 3. Configuración local del entorno
 Renombra el archivo que se encuentra en la carpeta:
-src/main/resources/application-local.yml.example
-Al nombre application-local.yml
+src/main/resources/application-template.yml.
+Al nombre application.yml
 
 Reemplaza los siguientes valores:
-<user> → Tu usuario de MongoDB Atlas u otro proveedor.
-<password> → La contraseña del usuario.
-<host> → El host de tu clúster (por ejemplo: cluster0.mongodb.net).
-<database> → El nombre de tu base de datos.
+${MONGO_URI} Sustituir por la cadena de conexión a mongodb
 
 ### 4. Construir el proyecto
 
