@@ -75,8 +75,8 @@ Maven instalado
 
 ### 2. Clonar el proyecto
 
-git clone https://github.com/tu-usuario/employee-api.git
-cd employee-api
+git clone https://github.com/edu5975/EmployeeManagementAPI
+Nos movemos al directorio que acabamos de crear
 
 ### 3. Configuración local del entorno
 Renombra el archivo que se encuentra en la carpeta:
